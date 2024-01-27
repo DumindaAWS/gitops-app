@@ -5,12 +5,7 @@ pipeline {
     }
 
     stages {
-        stage("Cleanup Workspace") {
-            steps {
-                cleanWs()
-            }
-        }
-
+       
         stage("Checkout from SCM") {
                steps {
                    git branch: 'main', credentialsId: '9deec83f-f312-44a0-aa36-226885ab73f1', url: 'https://github.com/DumindaAWS/gitops-app.git'
