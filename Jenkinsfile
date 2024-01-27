@@ -1,7 +1,7 @@
 pipeline {
     agent { label "Jenkins-Agent" }
     environment {
-              APP_NAME = "register-app-pipeline"
+              APP_NAME = "shopping-cart4"
     }
 
     stages {
@@ -30,13 +30,13 @@ pipeline {
         stage("Push the changed deployment file to Git") {
             steps {
                 sh """
-                   git config --global user.name "Ashfaque-9x"
-                   git config --global user.email "ashfaque.s510@gmail.com"
+                   git config --global user.name "DumindaAWS"
+                   git config --global user.email "aws.duminda@gmail.com"
                    git add deployment.yaml
                    git commit -m "Updated Deployment Manifest"
                 """
-                withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                  sh "git push https://github.com/Ashfaque-9x/gitops-register-app main"
+                withCredentials([gitUsernamePassword(credentialsId: '9deec83f-f312-44a0-aa36-226885ab73f1', gitToolName: 'Default')]) {
+                  sh "git push https://github.com/DumindaAWS/gitops-app main"
                 }
             }
         }
