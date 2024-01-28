@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
               APP_NAME = "shopping-cart4"
-              IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
     stages {
