@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gitops-app
-          image: duminda/shopping-cart4:25
+          image: duminda/shopping-cart4:27
           resources:
             limits:
               memory: "256Mi"
